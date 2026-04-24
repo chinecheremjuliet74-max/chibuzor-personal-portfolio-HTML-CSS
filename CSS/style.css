@@ -12,13 +12,14 @@ html {
 a {
     color: rgb(14, 13, 14);
     text-decoration: none;
+    
 }
 
 header {
     width: 100%;
     height: 4.5rem;
     font-family: "Montserrat", sans-serif;
-    border-bottom: 1px solid rgba(245, 243, 243, 0.3);
+    border-bottom: 1px solid rgba(53, 51, 51, 0.3);
     background-color: #d8d6d6;
     position: sticky;
     top: 0;
@@ -27,7 +28,7 @@ header {
 
 body {
     font-family: "Open Sans", sans-serif;
-    background: rgb(223, 217, 217)
+    background: rgb(233, 86, 225)
 
 }
 
@@ -35,6 +36,9 @@ header .nav-bar .logo {
     color: rgb(167, 43, 167);
     font-size: 22px;
     font-weight: 600;
+    margin: 0;
+    padding: 5px;
+    padding-left: 20px;
     align-items: center;
 }
 
@@ -55,13 +59,25 @@ header .nav-bar .nav-link a {
     color: rgb(22, 22, 22);
     text-decoration: none;
 }
+header .nav-bar .nav-link span {
+    margin: 10px;
+}
 
 .nav-bar .btn {
     color: #352bc0;
     font-size: 1.1rem;
-    padding: 8px;
+    padding: 5px;
+    
     margin-left: 40px;
-    justify-content: left;
+    justify-content: space-between;
+    border: none;
+    transition: .2s;
+}
+
+.nav-bar .btn:hover {
+    color: #c02bc0;
+    background: #bd75bd;
+    border: none;
 }
 
 .hero {
@@ -69,11 +85,11 @@ header .nav-bar .nav-link a {
     height: 100vh - 4.5rem;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
-    margin: 5px 0;
+    padding: 10px 70px;
+    margin: 0;
     gap: 40px;
     margin-bottom: 100px;
-    background-color: rgb(202, 194, 194);
+    background-color: rgb(199, 58, 187);
 
 }
 
@@ -120,44 +136,47 @@ header .nav-bar .nav-link a {
     border-radius: 80%;
 }
 
-.about {
+.about-container2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px 20px;
+    padding: 5px 20px;
     font-size: 20px;
     gap: 40px;
     align-items: center;
     border: none;
 }
 
-.about img {
+.about-container2 img {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 600px;
     border-radius: 40%;
     border: none;
 }
 
 .about h2 {
-    margin-bottom: 15px;
-    color: rgb(20, 19, 19);
+    margin-bottom: 20px;
+    color: rgb(19, 18, 18);
     font-size: 22px;
 }
 
-.about  p {
-    color: rgb(22, 22, 22);
+.about-para p {
+    color: rgb(19, 18, 18);
     font-size: 18px;
     margin-bottom: 15px;
     line-height: 1.6;
+    font-weight: 400;
 }
 
-.about .button {
-    padding: 10px 15px;
+.about-container2 button {
+    padding: 10px 10px;
     margin: 10px;
-    border: #beb8b8;
+    border: #afa7a7;
     border-radius: 5px;
+    color: #d80c0c;
 }
 
-.about .button:hover {
+.about .about-container2 .button:hover {
     color: rgb(172, 172, 179);
     border: #352bc0;
     background-color: #352bc0;
@@ -229,12 +248,11 @@ header .nav-bar .nav-link a {
     color: #c02bc0;
 }
 
-
 .contact {
     padding: 40px 10px;
     align-items: center;
+    background-color: rgb(184, 26, 176);
 }
-
 
 .contact-container {
     display: grid;
@@ -290,16 +308,22 @@ form input, form textarea {
     gap: 10px
 }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #807d7d;
-    color: #292424;
-    font-size: 20px;
+#footer {
+   width: 100%;
+   margin-top: 150px;
+   text-align: center;
+   background: #807d7d;
 }
 
-.footer p {
+#footer h1 {
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0px 0px 1px rgb(167, 9, 9);
+}
+
+#footer .credite p {
     margin-bottom: 10px;
+    font-size: 22px;
 }
 
 .footer a {
@@ -330,20 +354,21 @@ form input, form textarea {
         grid-template-columns: 1fr;
     }
 }
+
 @media (max-width:767px) {
     .nav-bar {
         padding: 0 20px;
     }
-    .nav-link a {
-        font-size: 22px;
-    }
+
     .nav-link li {
         display: none;
     }
+
     .hero {
         font-size: 35px;
+        max-width: 100%;
     }
-    .about {
+    .about-container2 {
         grid-template-columns: 1fr;
         text-align: center;
     }
