@@ -13,8 +13,7 @@ body {
     width: 100%;
     height: 100vh;
     font-family: "Open Sans", sans-serif;
-    background-color: #070707;
-    color: #d1d1d6;
+    color: #0e0d0d;
 }
 
 a {
@@ -23,13 +22,15 @@ a {
     
 }
 
+
+/* ----------------------------HEADER SECTION----------------------------*/
  header {
+    position: sticky;
     width: 100%;
     height: 4.5rem;
     font-family: "Montserrat", sans-serif;
     border-bottom: 1px solid rgba(208, 235, 233, 0.3);
-    background-color: #e2dce1;
-    position: sticky;
+    background-color: #852b76;
     top: 0;
     z-index: 50;
  }
@@ -53,8 +54,8 @@ a {
 
 .logo {
     margin-top: 10px;
-    color: #c02bc0;
-    font-size: 1rem;
+    color: #bda1bd;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -64,28 +65,30 @@ header .nav-bar .nav-link {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #bebcbc;
 }
 
 header .nav-bar .nav-link li {
     margin-left: 30px;
-    font-size: 15px;
+    font-size: 13px;
 
 }
 
 header .nav-bar .nav-link a {
-    color: rgb(22, 22, 22);
+    color: rgb(235, 230, 230);
     text-decoration: none;
 }
  
 .btn {
     margin-top: 15px;
 }
+
+
+/* -----------------------------HERO SECTION /HOME PAGE----------------------------*/
 .hero {
-    height: 70vh;
-    background-image: url(/HTML/Images/juliet\ 2.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 60vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -94,19 +97,27 @@ header .nav-bar .nav-link a {
     
 }
 
+.hero img{
+    width: 300px;
+    height: 400px;
+    padding: 5px;
+    border: none;
+    border-radius: 200px;
+}
+
 .hero-container {
    text-align: center;
-   margin-top: 15rem;
 }
 
 .hero h1 {
-    font-size: 25px;
-    color: rgb(14, 1, 1);
+    font-size: 2rem;
+    color: rgb(17, 17, 17);
 }
 
 .hero  p {
-    font-size: 15px;
-    color: rgb(19, 1, 1);
+    font-size: 1rem;
+    color: rgb(17, 17, 17);
+    font-weight: 600;
 }
 
 .hero  .btn {
@@ -132,6 +143,26 @@ header .nav-bar .nav-link a {
     border: 2px solid blueviolet;
 }
 
+.middle{
+    background-color: #c560c0;
+    padding: 3px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.abt{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(24, 23, 23);
+}
+
+  /*-------------------------------------- ABOUT SECTION------------------------*/
+
+.about{
+    padding: 20px;
+}
 .about-container2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -145,24 +176,24 @@ header .nav-bar .nav-link a {
 
 .about-container2 img {
     width: 400px;
-    border-radius: 10%;
+    border-radius: 5px;
     border: none;
     object-position: center;
     height: 100%;
 }
 
-.about h2 {
-    margin-bottom: 20px;
-    color: rgb(192, 189, 189);
-    font-size: 22px;
-}
 
 .about-para p {
-    color: rgb(136, 135, 135);
+    color: rgb(29, 29, 29);
     font-size: 18px;
     margin-bottom: 15px;
     line-height: 1.6;
     font-weight: 400;
+}
+
+.about-para span{
+    font-weight: 600;
+
 }
 
 .about-container2 button {
@@ -179,6 +210,7 @@ header .nav-bar .nav-link a {
     background-color: #352bc0;
 }
 
+/* ---------------------------------SKILLS SECTION--------------------------------*/
 .skills {
     padding: 60px 10px;
     text-align: center;
@@ -207,6 +239,9 @@ header .nav-bar .nav-link a {
 .skill-card:hover {
     transform: translateY(-10px);
 }
+
+
+/*-------------------------------- PROJECT SECTION-----------------------------------------*/
 
 .projects {
     padding: 60px 10px;
@@ -245,12 +280,14 @@ header .nav-bar .nav-link a {
     color: #c02bc0;
 }
 
+
+/*------------------------------------ CONTECT SECTION-------------------------------------------*/
+
 .contact {
     padding: 20px;
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
-    
     
 }
 
@@ -294,7 +331,7 @@ form input, form textarea {
 }
 
 .contact label {
-    color: rgba(185, 184, 184, 0.9);
+    color: rgba(187, 184, 184, 0.9);
     font-size: 1rem;
 }
 
@@ -315,10 +352,11 @@ form input, form textarea {
 }
 
 #footer {
-   width: 100%;
-   margin-top: 150px;
-   text-align: center;
-   background: #3a383a;
+    position: sticky;
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: #3a383a;
 }
 
 #footer h1 {
@@ -357,7 +395,7 @@ form input, form textarea {
     }
     .about {
         grid-template-columns: 1fr 1fr;
-        padding: 10px;
+        padding: 5px 10px;
     }
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
@@ -381,10 +419,32 @@ form input, form textarea {
         display: none;
     }
 
-    .hero-container {
-        grid-template-columns: 1fr;
-
+    .hero {
+    height: 60vh;
+    background-image: url(/HTML/Images/juliet\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    
     }
+
+    .hero img{
+        display: none;
+        
+    }
+
+    .hero-container {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    
     .about-container2 {
         grid-template-columns: 1fr;
         text-align: center;
