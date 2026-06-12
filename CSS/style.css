@@ -421,7 +421,7 @@ form input, form textarea {
 
     .hero {
     height: 60vh;
-    background-image: url(/Images/juliet\ 2.jpeg);
+    background-image: url("../Images/juliet\ 2.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
